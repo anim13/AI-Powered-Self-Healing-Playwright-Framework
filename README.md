@@ -53,23 +53,24 @@ HealingEngine.locate()
 
 ```text
 .
-├── .github/workflows/tests.yml
-├── .env.example
-├── pyproject.toml
-├── pytest.ini
-├── README.md
-├── src/self_healing_framework/
-│   ├── ai/
-│   ├── browser.py
-│   ├── config.py
-│   ├── healing/
-│   ├── pages/
-│   └── reporting/
-└── tests/
-    ├── conftest.py
-    ├── e2e/
-    ├── pages/
-    └── unit/
+|-- .github/workflows/tests.yml
+|-- .env.example
+|-- docs/METHOD_REFERENCE.md
+|-- pyproject.toml
+|-- pytest.ini
+|-- README.md
+|-- src/self_healing_framework/
+|   |-- ai/
+|   |-- browser.py
+|   |-- config.py
+|   |-- healing/
+|   |-- pages/
+|   `-- reporting/
+`-- tests/
+    |-- conftest.py
+    |-- e2e/
+    |-- pages/
+    `-- unit/
 ```
 
 ## Setup
@@ -111,6 +112,10 @@ Copy `.env.example` to `.env` and update values as needed.
 | `OPENAI_MODEL` | Model used by the OpenAI provider. |
 
 ## File And Method Explanation
+
+For detailed usage, parameters, return values, examples, and design notes for every method, read:
+
+[docs/METHOD_REFERENCE.md](docs/METHOD_REFERENCE.md)
 
 ### `src/self_healing_framework/config.py`
 
