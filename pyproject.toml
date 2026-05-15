@@ -1,0 +1,37 @@
+[project]
+name = "ai-self-healing-playwright-framework"
+version = "0.1.0"
+description = "Portfolio-grade Playwright Pytest framework with AI-assisted self-healing locators."
+requires-python = ">=3.10"
+dependencies = [
+    "playwright>=1.45.0",
+    "pytest>=8.0.0",
+    "pytest-html>=4.1.0",
+    "pydantic>=2.7.0",
+    "pydantic-settings>=2.3.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+ai = [
+    "openai>=1.35.0",
+]
+dev = [
+    "ruff>=0.5.0",
+]
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-markers"
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = [
+    "e2e: browser end-to-end tests",
+    "healing: tests covering self-healing locator behavior",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
